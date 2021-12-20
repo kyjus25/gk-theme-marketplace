@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+header {
+    -webkit-app-region: drag;
+}
+
+/* :root {
+  --primary: #303640;
+  --accent: #1C1E23;
+}
+
+body {
+    background-color: var(--accent);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: var(--primary);
+    height: 50px;
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+    padding: 0 1.5em;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+} */
+
+.toggle {
+    background-color: red;
+    
+}
+
+.toggle:not(:checked) {
+opacity: 0.6;
+}
+

@@ -1,12 +1,12 @@
 <script>
 	import Preview from "../components/Preview.svelte";
-	import { fetchThemes } from "$lib/stores";
+	import { fetchData } from "$lib/stores";
 
 </script>
 
 
 
-{#await fetchThemes() then}
+{#await fetchData() then}
 	<div class="form-control" />
 
 	<label class="input-group flex p-6">

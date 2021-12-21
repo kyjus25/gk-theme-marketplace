@@ -4,13 +4,14 @@
     export let name = null;
     export let author = null;
 
+    $:console.log($themes)
+    
     let hasTheme = false;
     $: {
         hasTheme = $themes.find((i) => i.includes(theme));
     }
 
     async function toggleTheme(e) {
-        e.preventDefault();
         if ($themes.find((i) => i.includes(theme))) {
             await deleteTheme();
         } else {
@@ -54,7 +55,7 @@
         <div>
             <input
                 type="checkbox"
-                on:click={toggleTheme}
+                on:click|preventDefault={toggleTheme}
                 checked={hasTheme}
                 class="toggle toggle-primary mt-2"
             />

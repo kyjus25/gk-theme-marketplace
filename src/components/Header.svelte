@@ -1,11 +1,13 @@
+<script>
+    import { page } from '$app/stores'
+
+</script>
 <header class="bg-neutral flex items-center justify-end h-12">
     <a class="mr-2" href="/">
-        <button class="btn btn-primary btn-sm">Shop</button>
+        <button class="{$page.path === "/" ? "btn-primary" : "btn-ghost" } btn btn-sm">Installed</button>
     </a>
-    <a class="mr-2" href="/">
-        <button class="btn btn-ghost btn-ghost text-white btn-sm"
-            >Installed</button
-        >
+    <a class="mr-2" href="/shop">
+        <button class="{$page.path === "/shop" ? "btn-primary" : "btn-ghost" } btn btn-sm">Shop</button>
     </a>
 </header>
 
@@ -18,6 +20,6 @@
         class="input input-primary flex-1"
     />
     <span class="bg-primary text-white">
-        <img width="20" src="/search.png" />
+        <img width="20" src="/search.png" alt="search button" />
     </span>
 </label>

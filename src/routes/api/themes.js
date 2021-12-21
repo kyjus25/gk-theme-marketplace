@@ -1,11 +1,11 @@
 import * as fs from 'fs';
 import * as os from 'os';
 
-export const get = async request => {
+export const get = async () => {
     const home = os.homedir();
-    const themes = fs.readdirSync(`${home}/.gitkraken/themes`);
+    const themes = (os.platform() === "win32") ? fs.readdirSync(`${home}\\AppData\\Roaming\\.gitkraken\\themes`) : fs.readdirSync(`${home}/.gitkraken/themes`);
     return {
-        body: themes.filter(i => i.includes('.jsonc'))
+        body: themes.filter(i => i.includes('.json'))
     }
 }
 
